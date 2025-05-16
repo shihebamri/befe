@@ -1,0 +1,36 @@
+# Frontend Generation Prompt for AI
+
+You are to generate a modern, responsive frontend for a Django REST API that manages tutorials. The backend API is already implemented and exposes the following endpoints:
+
+## API Endpoints
+- `GET /api/tutorials/` — List all tutorials. Supports optional filtering by `title` via query parameter.
+- `POST /api/tutorials/` — Create a new tutorial. Requires JSON body with `title` (string, max 70 chars), `description` (string, max 200 chars), and `published` (boolean, optional).
+- `DELETE /api/tutorials/` — Delete all tutorials.
+- `GET /api/tutorials/{id}/` — Retrieve a tutorial by its ID.
+- `PUT /api/tutorials/{id}/` — Update a tutorial by its ID. Accepts same fields as creation.
+- `DELETE /api/tutorials/{id}/` — Delete a tutorial by its ID.
+- `GET /api/tutorials/published/` — List all tutorials where `published` is true.
+
+## Data Model
+Each tutorial has:
+- `id`: integer (auto-generated)
+- `title`: string (max 70 chars, required)
+- `description`: string (max 200 chars, required)
+- `published`: boolean (default false)
+
+## Frontend Requirements
+- Provide a dashboard to list all tutorials, with search/filter by title.
+- Allow creating, editing, and deleting tutorials via forms.
+- Allow toggling the `published` status.
+- Provide a view to list only published tutorials.
+- Show success/error messages for all API operations.
+- Use modern UI/UX best practices (responsive design, clear feedback, accessible forms).
+- Use the API endpoints exactly as described (no changes to backend).
+- All API requests and responses are in JSON.
+
+## Additional Notes
+- The backend is running locally and accessible at the same origin.
+- You may use any modern frontend framework (React, Vue, Angular, etc.), but the UI must be clean and user-friendly.
+- Include clear navigation between all views (list, detail, create, edit, published-only).
+
+Generate all necessary frontend code, components, and configuration to fully implement this interface.
